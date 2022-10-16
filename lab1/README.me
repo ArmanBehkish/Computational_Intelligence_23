@@ -10,3 +10,11 @@ N=[5,10,20,100,500,1000]
 solution_weights=[12,39,41,461,2044,6844]
 visited_nodes=[6,9,5,11,10,17]
 
+Using Breath_First:
+
+    #Breath_first
+    search(initial_state, ref_lists,priority_function=lambda state: state.get_weight(ref_lists))
+
+N=[5,10,20,100,500,1000]
+solution_weights=[5,10,23,-,-,-]
+visited_nodes=[9023,88173,71303,-,-,-]
