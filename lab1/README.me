@@ -1,20 +1,28 @@
 # Set Covering Problem
 # Developer: Arman Behkish
+# The most optimal solution obtained by Using Heuarustics + depth_first (A*): 23 for N=20 visiting 372 nodes.
+# Here are the details of the experiments with various search methods, those which took long time was not tested.
 
 Using Depth_First:
-
-    #Depth_first
-    search(initial_state, ref_lists,priority_function=lambda state: -state.get_weight(ref_lists))
     
-N=[5,10,20,100,500,1000]
-solution_weights=[12,39,41,461,2044,6844]
-visited_nodes=[6,9,5,11,10,17]
+N=                  [5 ,10,20,100,500, 1000]
+solution_weights=   [12,39,41,461,2044,6844]
+visited_nodes=      [6, 9, 5, 11, 10,  17]
 
 Using Breath_First:
 
-    #Breath_first
-    search(initial_state, ref_lists,priority_function=lambda state: state.get_weight(ref_lists))
+N=                  [5   ,10,   20,100,500,1000]
+solution_weights=   [5   ,10,   23,-,-,-]
+visited_nodes=      [9023,88173,71303,-,-,-]
 
-N=[5,10,20,100,500,1000]
-solution_weights=[5,10,23,-,-,-]
-visited_nodes=[9023,88173,71303,-,-,-]
+Using Heauristics:
+
+N=                  [5,10,20,100,500, 1000]
+solution_weights=   [5,13,39,178,1361,2984]
+visited_nodes=      [3,3, 5, 5,  7,   8]
+
+Using Heuarustics + depth_first (A*)
+
+N=                  [5,10,20 , 100,500, 1000]
+solution_weights=   [5,10,23 , 178,1361,2984]
+visited_nodes=      [5,19,372, 5,  7,   8]
